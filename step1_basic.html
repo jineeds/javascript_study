@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let name = '지니';
+      // let age = 28;
+      // let isHappy = true;
+      // let empty;
+      // let nothing = null;
+      // let user = { name: '지니', age: 28 };
+      // let fruits = ['사과', '바나나'];
+      // let greet = function () {
+      //   return 'Hi!';
+      // };
+      // let sym = Symbol('id');
+
+      // console.log(typeof name); // string
+      // console.log(typeof age); // number
+      // console.log(typeof isHappy); // boolean
+      // console.log(typeof empty); // undefined
+      // console.log(typeof nothing); // object
+      // console.log(typeof user); // object
+      // console.log(typeof fruits); // object
+      // console.log(typeof greet); // function
+      // console.log(typeof sym); // symbol
+
+      // var x = 10;
+      // let y = 20;
+      // const z = 30;
+      // y = 25;
+      // z = 50; // error 재할당 불가능
+
+      //조건문
+
+      // let age = 18;
+      // if (age >= 20) {
+      //   console.log('성인입니다.');
+      // } else if (age >= 13) {
+      //   console.log('청소년입니다.');
+      // } else {
+      //   console.log('어린이입니다');
+      // }
+
+      // const isLoggedIn = false;
+
+      // if (isLoggedIn) {
+      //   console.log('mypage 이동');
+      // } else {
+      //   console.log('login page 이동');
+      // }
+
+      // let day = '토요일';
+
+      // switch (day) {
+      //   case '월요일':
+      //     console.log('월요병 조심!');
+      //     break;
+      //   case '금요일':
+      //     console.log('불금이다 🔥');
+      //     break;
+      //   case '토요일':
+      //   case '일요일':
+      //     console.log('주말에 꽃구경ㅎㅎㅎ');
+      //     break;
+      //   default:
+      //     console.log('평일이네, 힘내자!');
+      // }
+
+      // let color = prompt('좋아하는 색은 무엇인가요?');
+
+      // switch (color) {
+      //   case 'red':
+      //     alert('코카콜라! ❤️');
+      //     break;
+      //   case 'blue':
+      //     alert('포카리스웨트! 💙');
+      //     break;
+      //   case 'green':
+      //     alert('게토레이! 🌿');
+      //     break;
+      //   default:
+      //     alert('컬러는 다채로워😊');
+      // }
+
+      const cart = [
+        { name: '티셔츠', price: 15000, quantity: 2 },
+        { name: '바지', price: 30000, quantity: 1 },
+        { name: '양말', price: 3000, quantity: 5 },
+      ];
+
+      const productNames = cart.map((item) => item.name);
+      console.log(productNames); // 티셔츠, 바지, 양말
+
+      cart.forEach((item) => {
+        console.log(`${item.name}-${item.quantity}개`);
+      });
+
+      let total = 0;
+      for (let i = 0; i < cart.length; i++) {
+        total += cart[i].price * cart[i].quantity;
+      }
+      console.log('총 가격', total);
+
+      let socks = 5;
+
+      while (socks > 0) {
+        console.log(`양말 1개 판매! 남은 수량: ${socks - 1}`);
+        socks--;
+      }
+    </script>
+  </body>
+</html>
