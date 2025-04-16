@@ -1,0 +1,38 @@
+@use '../base/variables' as v;
+@use '../utils/mixins' as m;
+
+%btn-base {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+
+  @include m.respond(mobile) {
+    width: 100%;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+}
+
+@each $type, $bg in v.$colors {
+  .btn--#{$type} {
+    background: $bg;
+    color: map-get(v.$text-colors, $type);
+
+    @if $type == ghost {
+      border: 1px solid map-get(v.$colors, primary);
+    }
+  }
+}
+
+@each $size, $fs in v.$font-sizes {
+  .btn--#{$size} {
+    font-size: $fs;
+    padding: if($size == sm, 0.5rem 1rem, if($size == lg, 1rem 2rem, 0.75rem 1.5rem));
+  }
+}

@@ -1,0 +1,45 @@
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+.btn--primary {
+  background: #5f0080;
+  color: #fff;
+}
+
+.btn--danger {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #5f0080;
+  border: 1px solid #5f0080;
+}
+
+.btn--sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn--md {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn--lg {
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}/*# sourceMappingURL=main.css.map */
